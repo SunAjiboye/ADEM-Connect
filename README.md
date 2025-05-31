@@ -15,7 +15,7 @@ CI/CD: GitHub Actions for ETL, code scanning, and dependency updates.
 Prerequisites
 
 Docker: For running the app and database.
-R: For local development (optional, version 4.3.0+).
+R: For local development (optional, version 4.4.3+).
 PostgreSQL: Version 17, included in Docker Compose.
 GitHub Account: For CI/CD and dependency management.
 Docker Hub Account: To pull/push the username/adem-connect image.
