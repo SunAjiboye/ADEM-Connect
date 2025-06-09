@@ -1,0 +1,8 @@
+Dockerfile
+docker-compose.yml
+.Rproj.user
+.Rhistory
+.Rdata
+.httr-oauth
+.DS_Store
+.quarto
