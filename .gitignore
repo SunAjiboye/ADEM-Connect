@@ -1,8 +1,31 @@
-Dockerfile
-docker-compose.yml
-.Rproj.user
+# Ignore R workspace and history files
+.RData
 .Rhistory
-.Rdata
-.httr-oauth
-.DS_Store
-.quarto
+.Rprofile
+
+# Ignore R package dependencies
+renv/
+renv.lock
+
+# Ignore compiled files
+*.o
+*.so
+*.dll
+
+# Ignore logs and temporary files
+logs/
+*.log
+*.tmp
+*.bak
+
+# Ignore database credentials or sensitive configs
+config.env
+.env
+
+# Ignore Docker artifacts
+*.tar
+*.img
+docker-compose.override.yml
+
+# Ignore SBOM artifacts (if not needed in Git)
+SBOM/*.json
