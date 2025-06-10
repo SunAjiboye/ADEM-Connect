@@ -1,0 +1,21 @@
+name: SBOM Analysis
+on: push
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      
+      - name: Install Syft
+        run: curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh
+      
+      - name: Run Syft SBOM Scan
+        run: syft . -o json > SBOM/sbom_syft.json
+      
+      - name: Upload SBOM Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: sbom_syft
+          path: SBOM/sbom_syft.json
